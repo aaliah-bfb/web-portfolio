@@ -1,0 +1,108 @@
+:root {
+  --bg: #f7f7ff;
+  --surface: #ffffff;
+  --ink: #495867;
+  --muted: rgba(73, 88, 103, 0.62);
+  --accent: #577399;
+  --accent-tint: #bdd5ea;
+  --accent-tint-strong: rgba(189, 213, 234, 0.55);
+
+  --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --radius: 24px;
+  --shadow: 0 6px 24px rgba(73, 88, 103, 0.08);
+  --shadow-hover: 0 14px 34px rgba(73, 88, 103, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 64px 32px 100px;
+}
+
+.skills-page {
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: 0 auto;
+}
+
+.skills-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.skills-tab {
+  border: none;
+  cursor: pointer;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: var(--bg);
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 13.5px;
+  color: var(--muted);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.skills-tab:hover {
+  color: var(--ink);
+}
+
+.skills-tab.active {
+  background: var(--accent-tint);
+  color: var(--accent);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  background: var(--surface);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  border: 1px solid #577399;
+}
+
+.skill-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+
+.skill-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.skill-card h5 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--ink);
+}

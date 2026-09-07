@@ -1,0 +1,113 @@
+.experience-page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 64px 32px 100px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skill-list li {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--bg);
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: var(--accent-tint);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--accent-tint);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-item--left .timeline-content {
+  grid-column: 1;
+  justify-self: end;
+}
+
+.timeline-item--right .timeline-content {
+  grid-column: 2;
+  justify-self: start;
+}
+
+.timeline-content .card {
+  width: 420px;
+  max-width: 100%; 
+}
+
+@media (max-width: 768px) {
+  .timeline-container::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    padding-left: 48px;
+  }
+
+  .timeline-dot {
+    left: 20px;
+  }
+
+  .timeline-item--left .timeline-content,
+  .timeline-item--right .timeline-content {
+    grid-column: 1;
+    justify-self: start;
+  }
+}
+
+.company-link--plain {
+  cursor: default;
+}
+
+.company-link--plain:hover {
+  border-bottom-color: transparent; 
+}

@@ -1,0 +1,3 @@
+const PROJECTS = [
+  'first-project',
+];

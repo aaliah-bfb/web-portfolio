@@ -1,0 +1,178 @@
+.project-page {
+  max-width: 1300px;
+  margin: 120px auto 80px;
+  padding: 0 40px;
+}
+
+.project-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.project-nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: .2s;
+}
+
+.project-nav a:hover {
+  color: var(--dark-border);
+}
+
+.project-header {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 36px;
+}
+
+.project-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-info h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--ink);
+}
+
+.project-banner {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.project-banner img {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
+
+.project-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.project-title-row h3 {
+  margin: 0;
+}
+
+.status-badge {
+  position: static;
+  box-shadow: none;
+  flex-shrink: 0;
+}
+
+.project-meta-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+  margin-top: 12px;
+  overflow-x: auto; 
+}
+
+.project-meta-row .card-tags {
+  flex-shrink: 0;
+}
+
+.project-meta-row .tech-stack {
+  flex-shrink: 0;
+  flex-wrap: nowrap; 
+}
+
+.meta-separator {
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tech-stack li {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.project-links {
+  display: flex;
+  gap: 20px;
+}
+
+.project-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent);
+  border-bottom: 1.5px solid transparent;
+}
+
+.project-links a:hover {
+  border-bottom-color: var(--accent);
+}
+
+
+#project-content {
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: var(--ink);
+}
+
+#project-content h2 {
+  margin: 32px 0 12px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--ink);
+}
+
+#project-content p {
+  margin: 0 0 16px;
+}
+
+#project-content a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+#project-content ul,
+#project-content ol {
+  margin: 0 0 16px;
+  padding-left: 22px;
+}
+
+@media (max-width: 700px) {
+  .project-header {
+    flex-direction: column-reverse;
+  }
+  .project-banner {
+    flex: none;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+  .project-page {
+    padding: 40px 20px 64px;
+  }
+}

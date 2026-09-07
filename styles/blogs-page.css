@@ -1,0 +1,49 @@
+.page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 64px 32px 100px;
+}
+
+.blog-layout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+@media (max-width: 780px) {
+  .blog-layout {
+    grid-template-columns: 1fr;
+  }
+  .page {
+    padding: 32px 20px 64px;
+  }
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.archive {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+  border: 1px solid #577399;
+}
+
+.archive h4 {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--ink);
+}
+
+.archive p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}

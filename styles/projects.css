@@ -1,0 +1,48 @@
+:root {
+  --bg: #f7f7ff;
+  --surface: #ffffff;
+  --ink: #577399;
+  --muted: rgba(73, 88, 103, 0.62);
+  --accent: #577399;
+  --accent-tint: #bdd5ea;
+  --accent-tint-strong: rgba(189, 213, 234, 0.55);
+  --dark-border: #495867;
+
+  --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --radius: 24px;
+  --shadow: 0 6px 24px rgba(73, 88, 103, 0.08);
+  --shadow-hover: 0 14px 34px rgba(73, 88, 103, 0.14);
+}
+
+/* ------------------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    line-height: 1.5;
+}
+
+.project-layout {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 64px 32px 100px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.card-tags {
+    margin-top: 15px;
+}

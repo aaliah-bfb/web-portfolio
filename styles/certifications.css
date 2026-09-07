@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 64px 32px 100px;
+  
+}
+
+#certifications-page {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.certs-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px;
+  margin-bottom: 32px;
+}
+
+.cert-tab {
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.cert-tab:hover {
+  color: var(--ink);
+}
+
+.cert-tab.active {
+  background: var(--accent-tint);
+  color: var(--accent);
+}
+
+.certs-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  padding-left: 1%;
+}
