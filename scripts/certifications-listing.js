@@ -1,6 +1,7 @@
 const CATEGORY_LABELS = {
   ongoing: 'Ongoing',
   cyber: 'Cyber Security',
+  design: 'Design',
   other: 'Other',
 };
 

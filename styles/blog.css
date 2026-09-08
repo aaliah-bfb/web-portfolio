@@ -93,7 +93,7 @@ body {
 #post-content {
     max-width: 1300px;
     margin: 0 auto;
-    color: var(--ink);
+    color: var(--muted);
     font-size: 1.1rem;
 }
 

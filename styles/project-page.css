@@ -44,6 +44,14 @@
   color: var(--ink);
 }
 
+.project-description {
+  margin-top: auto;
+  padding-top: 16px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
 .project-banner {
   display: flex;
   justify-content: flex-end;
@@ -81,7 +89,7 @@
   flex-wrap: nowrap;
   gap: 10px;
   margin-top: 12px;
-  overflow-x: auto; 
+  overflow-x: auto;
 }
 
 .project-meta-row .card-tags {
@@ -90,7 +98,7 @@
 
 .project-meta-row .tech-stack {
   flex-shrink: 0;
-  flex-wrap: nowrap; 
+  flex-wrap: nowrap;
 }
 
 .meta-separator {
@@ -119,6 +127,7 @@
 .project-links {
   display: flex;
   gap: 20px;
+  flex-shrink: 0;
 }
 
 .project-links a {
@@ -126,29 +135,55 @@
   font-weight: 500;
   color: var(--accent);
   border-bottom: 1.5px solid transparent;
+  white-space: nowrap;
 }
 
 .project-links a:hover {
   border-bottom-color: var(--accent);
 }
 
-
 #project-content {
-  font-size: 15.5px;
-  line-height: 1.75;
+  max-width: 1300px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+#project-content h1 {
+  margin: 32px 0 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 26px;
   color: var(--ink);
 }
 
 #project-content h2 {
   margin: 32px 0 12px;
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 20px;
   color: var(--ink);
 }
 
+#project-content h3 {
+  margin: 28px 0 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--ink);
+}
+
+#project-content h4 {
+  margin: 24px 0 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15.5px;
+  color: var(--ink);
+}
+
 #project-content p {
-  margin: 0 0 16px;
+  margin-bottom: 1.6rem;
+  line-height: 1.7;
 }
 
 #project-content a {
@@ -163,6 +198,38 @@
   padding-left: 22px;
 }
 
+#project-content code {
+  background: var(--accent-tint);
+  color: var(--accent);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 0.9em;
+}
+
+#project-content pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+}
+
+#project-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 24px auto;
+  border-radius: 18px;
+}
+
+#project-content video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 24px auto;
+  border-radius: 18px;
+}
+
 @media (max-width: 700px) {
   .project-header {
     flex-direction: column-reverse;
@@ -174,5 +241,16 @@
   }
   .project-page {
     padding: 40px 20px 64px;
+  }
+  .project-meta-row {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+  .project-meta-row .tech-stack {
+    flex-wrap: wrap;
+  }
+  .project-description {
+    margin-top: 0;
+    padding-top: 0;
   }
 }

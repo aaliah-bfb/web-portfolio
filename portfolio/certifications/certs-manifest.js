@@ -1,13 +1,13 @@
 const CERTS = [
     {
-    title: 'Certification Name',
+    title: 'Pre Security',
     category: 'ongoing',
-    issued: '',
-    expires: '',
-    company: '',
-    companyLogo: '',
-    companyLink: '',
-    skills: ['Skill 1'],
+    issued: ': N/A',
+    expires: ': N/A',
+    company: 'TryHackMe',
+    companyLogo: '../../assets/icons/thm.png',
+    companyLink: 'https://tryhackme.com/path/outline/presecurity',
+    skills: ['Offensive Security', 'Defensive Security', 'Operating Systems', 'Software', 'Networking'],
     pdfLink: '#',
     },
     {
@@ -21,6 +21,17 @@ const CERTS = [
     skills: ['Cyber Security Risk', 'Presentation Design', 'Data Privacy'],
     pdfLink: '#',
   },
+      {
+    title: 'Figma Design for Beginners',
+    category: 'design',
+    issued: 'Sep 2026',
+    expires: ': N/A',
+    company: 'Figma',
+    companyLogo: '../../assets/icons/figma.png',
+    companyLink: 'https://www.figma.com/make/',
+    skills: ['UI Design', 'Prototyping'],
+    pdfLink: '#',
+    },
   {
     title: 'Bronze DofE Award',
     category: 'other',

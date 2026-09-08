@@ -13,10 +13,10 @@ async function renderProjectPost() {
   document.title = data.title || 'Project';
   document.getElementById('project-title').textContent = data.title || '';
 
-const tagsEl = document.getElementById('project-tags');
-tagsEl.innerHTML = (data.tags || [])
-  .map((tag) => `<span>${tag}</span>`)
-  .join('');
+  const tagsEl = document.getElementById('project-tags');
+  tagsEl.innerHTML = (data.tags || [])
+    .map((tag) => `<span>${tag}</span>`)
+    .join('');
 
   const statusEl = document.getElementById('project-status');
   if (data.status) {
@@ -28,15 +28,10 @@ tagsEl.innerHTML = (data.tags || [])
   bannerEl.src = data.banner || '';
   bannerEl.alt = `${data.title || 'Project'} banner`;
 
-const techEl = document.getElementById('project-tech-stack');
-techEl.innerHTML = (data.techStack || [])
-  .map((tech) => `<li>${tech}</li>`)
-  .join('');
-
-  const separatorEl = document.getElementById('project-meta-separator');
-const hasTags = (data.tags || []).length > 0;
-const hasTech = (data.techStack || []).length > 0;
-separatorEl.hidden = !(hasTags && hasTech);
+  const techEl = document.getElementById('project-tech-stack');
+  techEl.innerHTML = (data.techStack || [])
+    .map((tech) => `<li>${tech}</li>`)
+    .join('');
 
   const linksEl = document.getElementById('project-links');
   const links = [];
@@ -44,6 +39,20 @@ separatorEl.hidden = !(hasTags && hasTech);
   if (data.demo) links.push(`<a href="${data.demo}" target="_blank" rel="noopener">Live Demo ↗</a>`);
   linksEl.innerHTML = links.join('');
   linksEl.hidden = links.length === 0;
+
+  const separatorEl = document.getElementById('project-meta-separator');
+  const linksSeparatorEl = document.getElementById('project-links-separator');
+  const hasTags = (data.tags || []).length > 0;
+  const hasTech = (data.techStack || []).length > 0;
+  const hasMeta = hasTags || hasTech;
+  const hasLinks = links.length > 0;
+
+  separatorEl.hidden = !(hasTags && hasTech);
+  linksSeparatorEl.hidden = !(hasMeta && hasLinks);
+
+  const descriptionEl = document.getElementById('project-description');
+  descriptionEl.textContent = data.description || '';
+  descriptionEl.hidden = !data.description;
 
   document.getElementById('project-content').innerHTML = marked.parse(content);
 
