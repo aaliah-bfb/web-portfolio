@@ -1,5 +1,16 @@
 const CERTS = [
     {
+    title: 'Certification Name',
+    category: 'ongoing',
+    issued: '',
+    expires: '',
+    company: '',
+    companyLogo: '',
+    companyLink: '',
+    skills: ['Skill 1'],
+    pdfLink: '#',
+    },
+    {
     title: 'Cs50 Introduction to Cyber Security',
     category: 'cyber',
     issued: 'May 2024',

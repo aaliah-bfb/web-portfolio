@@ -13,7 +13,7 @@
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: box-shadow 0.25s ease, transform 0.25s ease;
-  border: 1px solid #577399;
+  border: 1px solid var(--accent);
 }
 
 .card-link:hover .card {
@@ -150,4 +150,3 @@
 .pdf-link:hover {
   border-bottom-color: var(--accent);
 }
-

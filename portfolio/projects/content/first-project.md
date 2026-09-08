@@ -1,7 +1,7 @@
 ---
 title: This Website
 tags: Web Development
-banner: ../../assets/banners/banner.png
+banner: ../../assets/banners/website-banner.png
 techStack: HTML, CSS, Javascript
 status: Completed
 repo: https://github.com/janedoe/first-project

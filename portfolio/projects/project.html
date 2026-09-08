@@ -2,6 +2,7 @@
 <html>
     <meta charset="utf-8">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link rel="stylesheet" href="../../styles/card.css">
         <link rel="stylesheet" href="../../styles/project-page.css">
@@ -14,42 +15,64 @@
             <div class="title">
                 <h2>PROJECTS</h2>
             </div>
+            <button class="hamburger" onclick="document.querySelector('.navbar').classList.toggle('open')" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="links">
-                <a href="../../index.html">ABOUT ME</a>
+                <a href= "../../">ABOUT ME</a>
                 <a href="../blogs/">BLOGS</a>
-                <a href="../certifications/index.html">CERTIFICATIONS</a>
-                <a href="../experiences/index.html">EXPERIENCES</a>
-                <a class="active" href="../projects/index.html">PROJECTS</a>
-                <a href="../skills/index.html">SKILLS</a>
+                <a href="../certifications/">CERTIFICATIONS</a>
+                <a href="../experiences/">EXPERIENCES</a>
+                <a class="active" href="../projects/">PROJECTS</a>
+                <a href="../skills/">SKILLS</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
             </div>
         </div>
-<div class="project-page">
-    <div class="project-header">
-        <div class="project-info">
-            <div class="project-nav">
-                <a id="prev-link" href="#">← Previous Project</a>
-                <a id="next-link" href="#">Next Project →</a>
+        <div class="project-page">
+            <div class="project-header">
+                <div class="project-info">
+                    <div class="project-nav">
+                        <a id="prev-link" href="#">← Previous Project</a>
+                        <a id="next-link" href="#">Next Project →</a>
+                    </div>
+                    <div class="project-title-row">
+                        <h3 id="project-title"></h3>
+                        <span class="status-badge" id="project-status" hidden></span>
+                    </div>
+                    <div class="project-meta-row" id="project-meta-row">
+                        <div class="card-tags" id="project-tags"></div>
+                        <span class="meta-separator" id="project-meta-separator" hidden>•</span>
+                        <ul class="tech-stack" id="project-tech-stack"></ul>
+                    </div>
+                    <div class="project-links" id="project-links" hidden></div>
+                </div>
+                <div class="project-banner">
+                    <img id="project-banner" src="" alt="">
+                </div>
             </div>
-            <div class="project-title-row">
-                <h3 id="project-title"></h3>
-                <span class="status-badge" id="project-status" hidden></span>
-            </div>
-            <div class="project-meta-row" id="project-meta-row">
-                <div class="card-tags" id="project-tags"></div>
-                <span class="meta-separator" id="project-meta-separator" hidden>•</span>
-                <ul class="tech-stack" id="project-tech-stack"></ul>
-            </div>
-            <div class="project-links" id="project-links" hidden></div>
+            <div id="project-content"></div>
         </div>
-        <div class="project-banner">
-            <img id="project-banner" src="" alt="">
-        </div>
-    </div>
-    <div id="project-content"></div>
-</div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="/scripts/theme.js"></script>
         <script src="../../scripts/markdown-utils.js"></script>
         <script src="manifest.js"></script>
         <script src="../../scripts/project-post.js"></script>

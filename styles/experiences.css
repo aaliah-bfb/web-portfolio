@@ -52,8 +52,12 @@
   grid-template-columns: 1fr 1fr;
   gap: 48px;
   margin-bottom: 48px;
+  min-width: 0;          /* add this */
 }
 
+.timeline-content {
+  min-width: 0;           /* and this */
+}
 .timeline-dot {
   position: absolute;
   top: 8px;
@@ -83,6 +87,10 @@
   max-width: 100%; 
 }
 
+.exp-description {
+  color: var(--ink);
+}
+
 @media (max-width: 768px) {
   .timeline-container::before {
     left: 20px;
@@ -100,7 +108,12 @@
   .timeline-item--left .timeline-content,
   .timeline-item--right .timeline-content {
     grid-column: 1;
-    justify-self: start;
+    justify-self: stretch;   /* changed from start */
+    width: 100%;             /* add this */
+  }
+
+  .timeline-content .card {
+    width: 100%;              /* override the 420px */
   }
 }
 
