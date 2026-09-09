@@ -37,3 +37,11 @@ async function loadPost(mdPath) {
   const raw = await response.text();
   return parseFrontMatter(raw);
 }
+
+const SPOILER_REGEX = /SPOILER\[([\s\S]*?)\]/g;
+
+function renderSpoilers(mdText) {
+  return mdText.replace(SPOILER_REGEX, (match, inner) => {
+    return `<span class="spoiler" onclick="this.classList.toggle('spoiler--revealed')">${inner}</span>`;
+  });
+}

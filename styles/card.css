@@ -77,6 +77,13 @@
   margin-bottom: 8px;
 }
 
+.card-description {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
 .status-badge {
   position: absolute;
   top: 14px;

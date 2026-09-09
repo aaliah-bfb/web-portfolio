@@ -1,6 +1,6 @@
 const CERTS = [
     {
-    title: 'Pre Security',
+    title: 'Course: Pre Security',
     category: 'ongoing',
     issued: ': N/A',
     expires: ': N/A',
@@ -11,7 +11,7 @@ const CERTS = [
     pdfLink: '#',
     },
     {
-    title: 'Cs50 Introduction to Cyber Security',
+    title: 'Course: Cs50 Introduction to Cyber Security',
     category: 'cyber',
     issued: 'May 2024',
     expires: ': N/A',
